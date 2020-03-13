@@ -9,6 +9,8 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.5",
+    "clsx": "^1.1.0",
     "next": "latest",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
