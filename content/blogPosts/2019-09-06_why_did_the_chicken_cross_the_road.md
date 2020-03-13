@@ -7,3 +7,4 @@ thumbnail: /static/img/1200px-whio_blue_duck_at_staglands_akatarawa_new_zealand.
 To get to the other side.
 
 I know it's a picture of a duck in the thumbnail.
+<div>fuck you</div>
