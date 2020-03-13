@@ -1,13 +1,13 @@
 import Link from './common/Link';
 
-const Layout = ({ children }) => (
+const PageLayout = ({ children }) => (
   <>
     <nav>
       <Link href="/">
         <a>home</a>
       </Link>
-      <Link href="/blog">
-        <a>blog</a>
+      <Link href="/stickers">
+        <a>stickers</a>
       </Link>
       <Link href="/about">
         <a>about</a>
@@ -30,4 +30,4 @@ const Layout = ({ children }) => (
   </>
 )
 
-export default Layout
+export default PageLayout;

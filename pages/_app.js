@@ -1,10 +1,11 @@
-import { Fragment, useEffect, useMemo, useRef } from 'react';
+import { Fragment, useEffect } from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import createAppTheme from '../theme';
 import RootContainer from '../containers/RootContainer';
-
+import { DefaultSeo } from 'next-seo'
+import SEO from '../next-seo.config';
 
 export default function MyApp({ Component, pageProps, store }) {
     // Remove the server-side injected CSS.
@@ -23,6 +24,7 @@ export default function MyApp({ Component, pageProps, store }) {
             </Head>
             <ThemeProvider theme={createAppTheme('ltr')}>
                 <CssBaseline />
+                <DefaultSeo {...SEO} />
                 <RootContainer>
                     <Component {...pageProps} />
                 </RootContainer>

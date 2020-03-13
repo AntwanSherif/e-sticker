@@ -1,12 +1,12 @@
 const fs = require('fs')
-const blogPostsFolder = './content/blogPosts'
+const stickersFolder = './content/stickers';
 
-const getPathsForPosts = () =>
-  fs.readdirSync(blogPostsFolder).reduce((acc, blogName) => {
+const getPathsForStickers = () =>
+  fs.readdirSync(stickersFolder).reduce((acc, blogName) => {
     const trimmedName = blogName.substring(0, blogName.length - 3)
     return Object.assign(acc, {
-      [`/blog/post/${trimmedName}`]: {
-        page: '/blog/post/[slug]',
+      [`/stickers/${trimmedName}`]: {
+        page: '/stickers/[slug]',
         query: {
           slug: trimmedName,
         },
@@ -25,7 +25,7 @@ module.exports = {
   async exportPathMap(defaultPathMap) {
     return {
       ...defaultPathMap,
-      ...getPathsForPosts(),
+      ...getPathsForStickers(),
     }
   },
 }
